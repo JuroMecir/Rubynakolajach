@@ -1,0 +1,2 @@
+class FishIdsController < ApplicationController
+end

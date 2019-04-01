@@ -1,0 +1,2 @@
+module FishIdsHelper
+end

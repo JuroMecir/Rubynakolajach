@@ -1,0 +1,2 @@
+module MethodIdsHelper
+end

@@ -1,0 +1,2 @@
+module FishermanFriendHelper
+end

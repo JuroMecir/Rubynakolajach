@@ -1,0 +1,2 @@
+class MethodIdsController < ApplicationController
+end

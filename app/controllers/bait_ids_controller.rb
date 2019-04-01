@@ -1,0 +1,2 @@
+class BaitIdsController < ApplicationController
+end

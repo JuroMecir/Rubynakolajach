@@ -1,0 +1,2 @@
+class TimeId < ApplicationRecord
+end
