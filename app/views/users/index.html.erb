@@ -9,13 +9,15 @@
 
       <%= user.name %>
       <%= user.surname %>
-      <%= link_to  user.email, user %>
+      <%= user.email %>
+      <%= link_to  'show', user %>
+
 
     </li>
 
 
   <% end %>
-  <%= will_paginate @users %>
+
 </ul>
 
 
