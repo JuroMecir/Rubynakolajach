@@ -1,0 +1,7 @@
+<li id="catch-<%= catch.id %>">
+  <span class="user"><%= link_to catch.user.name, catch.user.surname, catch.user %></span>
+  <span class="size"><%= catch.size %></span>
+  <span class="timestamp">
+    Caught <%= time_ago_in_words(catch.created_at) %> ago.
+  </span>
+</li>

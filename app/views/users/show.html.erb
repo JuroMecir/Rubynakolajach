@@ -9,5 +9,12 @@
        <%= "Email:" %> <%= @user.email %>
     </section>
   </aside>
+  <div class="col-md-8">
+    <% if @user.catches.any? %>
+      <ol class="catches">
+        <%= render @catches %>
+      </ol>
+    <% end %>
+  </div>
 </div>
 

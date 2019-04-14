@@ -11,5 +11,6 @@ Rails.application.routes.draw do
   delete 'logout', to:'sessions#destroy'
   root 'fisherman_friend#home'
   resources :users
+  resources :catches,          only: [:create, :destroy]
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

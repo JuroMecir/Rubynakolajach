@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_01_120943) do
+ActiveRecord::Schema.define(version: 2019_04_14_195715) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,8 +22,8 @@ ActiveRecord::Schema.define(version: 2019_04_01_120943) do
     t.integer "acreage"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "owners_id"
-    t.index ["owners_id"], name: "index_areas_on_owners_id"
+    t.bigint "owner_id"
+    t.index ["owner_id"], name: "index_areas_on_owner_id"
   end
 
   create_table "bait_ids", force: :cascade do |t|
@@ -37,18 +37,18 @@ ActiveRecord::Schema.define(version: 2019_04_01_120943) do
     t.integer "weight"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "fish_ids_id"
-    t.bigint "time_ids_id"
-    t.bigint "bait_ids_id"
-    t.bigint "method_ids_id"
-    t.bigint "users_id"
-    t.bigint "areas_id"
-    t.index ["areas_id"], name: "index_catches_on_areas_id"
-    t.index ["bait_ids_id"], name: "index_catches_on_bait_ids_id"
-    t.index ["fish_ids_id"], name: "index_catches_on_fish_ids_id"
-    t.index ["method_ids_id"], name: "index_catches_on_method_ids_id"
-    t.index ["time_ids_id"], name: "index_catches_on_time_ids_id"
-    t.index ["users_id"], name: "index_catches_on_users_id"
+    t.bigint "fish_id_id"
+    t.bigint "time_id_id"
+    t.bigint "bait_id_id"
+    t.bigint "method_id_id"
+    t.bigint "user_id"
+    t.bigint "area_id"
+    t.index ["area_id"], name: "index_catches_on_area_id"
+    t.index ["bait_id_id"], name: "index_catches_on_bait_id_id"
+    t.index ["fish_id_id"], name: "index_catches_on_fish_id_id"
+    t.index ["method_id_id"], name: "index_catches_on_method_id_id"
+    t.index ["time_id_id"], name: "index_catches_on_time_id_id"
+    t.index ["user_id"], name: "index_catches_on_user_id"
   end
 
   create_table "fish_ids", force: :cascade do |t|
@@ -85,11 +85,11 @@ ActiveRecord::Schema.define(version: 2019_04_01_120943) do
     t.string "password_digest"
   end
 
-  add_foreign_key "areas", "owners", column: "owners_id"
-  add_foreign_key "catches", "areas", column: "areas_id"
-  add_foreign_key "catches", "bait_ids", column: "bait_ids_id"
-  add_foreign_key "catches", "fish_ids", column: "fish_ids_id"
-  add_foreign_key "catches", "method_ids", column: "method_ids_id"
-  add_foreign_key "catches", "time_ids", column: "time_ids_id"
-  add_foreign_key "catches", "users", column: "users_id"
+  add_foreign_key "areas", "owners"
+  add_foreign_key "catches", "areas"
+  add_foreign_key "catches", "bait_ids"
+  add_foreign_key "catches", "fish_ids"
+  add_foreign_key "catches", "method_ids"
+  add_foreign_key "catches", "time_ids"
+  add_foreign_key "catches", "users"
 end

@@ -5,9 +5,9 @@ ruby '2.5.3'
 
 gem 'bcrypt',         '3.1.12'
 gem 'jquery-rails'
-gem 'will_paginate',           '3.1.0'
-gem 'bootstrap-will_paginate', '1.0.0'
-
+gem 'will_paginate',    '~>3.1' ,      '>=3.1.6'
+gem 'bootstrap-will_paginate', '>=1.0.0'
+gem 'faker'
 gem 'bootstrap-sass', '3.3.7'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'
