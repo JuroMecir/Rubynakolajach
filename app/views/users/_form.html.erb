@@ -1,42 +1,20 @@
-<%= form_with(model: user, local: true) do |form| %>
-  <% if user.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+<%= form_for(@user) do |f| %>
+  <%= render 'shared/error_messages', object: @user %>
 
-      <ul>
-      <% user.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+  <%= f.label :name %>
+  <%= f.text_field :name, class: 'form-control' %>
 
-  <div class="field">
-    <%= form.label :name  %>
-    <%= form.text_field :name, class: "form-control" %>
-  </div>
+  <%= f.label :surname %>
+  <%= f.text_field :surname, class: 'form-control' %>
 
-  <div class="field">
-    <%= form.label :surname %>
-    <%= form.text_field :surname , class: "form-control" %>
-  </div>
+  <%= f.label :age %>
+  <%= f.text_field :age, class: 'form-control' %>
 
-  <div class="field">
-    <%= form.label :age %>
-    <%= form.number_field :age, class: "form-control" %>
-  </div>
+  <%= f.label :email %>
+  <%= f.email_field :email, class: 'form-control' %>
 
-  <div class="field">
-    <%= form.label :email %>
-    <%= form.text_field :email, class: "form-control" %>
-  </div>
+  <%= f.label :password %>
+  <%= f.password_field :password, class: 'form-control' %>
 
-  <div class="field">
-    <%= form.label :password %>
-    <%= form.password_field :password, class: "form-control" %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit class:"btn btn-primary btn-lg btn-block" %>
-  </div>
+  <%= f.submit yield(:button_text), class: "btn btn-primary" %>
 <% end %>
