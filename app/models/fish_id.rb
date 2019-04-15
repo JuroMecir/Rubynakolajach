@@ -1,2 +1,3 @@
 class FishId < ApplicationRecord
+
 end

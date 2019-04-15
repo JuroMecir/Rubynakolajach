@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get '/login', to:'sessions#new'
   post '/login', to: 'sessions#create'
   delete 'logout', to:'sessions#destroy'
+  get '/catches', to:'fisherman_friend#home'
   root 'fisherman_friend#home'
   resources :users
   resources :catches,          only: [:create, :destroy]

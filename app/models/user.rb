@@ -12,6 +12,9 @@ class User < ApplicationRecord
   validates :password, presence: true, length: {minimum: 6, maximum: 50}
 
 
+  def feed
+    Catch.where("user_id = ?", id)
+  end
 
   has_secure_password
   def User.digest(string)

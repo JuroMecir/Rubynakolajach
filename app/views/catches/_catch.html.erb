@@ -1,7 +1,12 @@
 <li id="catch-<%= catch.id %>">
-  <span class="user"><%= link_to catch.user.name, catch.user.surname, catch.user %></span>
-  <span class="size"><%= catch.size %></span>
+  <span class="user"><%= link_to catch.user.name, catch.user %> caught fish.</span>
+  <span class="size">Size: <%=  catch.size %> cm,</span>
+  <span class="size">Weight: <%=  catch.weight %> kg</span>
   <span class="timestamp">
-    Caught <%= time_ago_in_words(catch.created_at) %> ago.
+    <%= time_ago_in_words(catch.created_at) %> ago.
+    <% if current_user?(catch.user) %>
+      <%= link_to "delete",catch, method: :delete,
+                  data: { confirm: "You sure?" } %>
+    <% end %>
   </span>
 </li>

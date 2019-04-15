@@ -3,16 +3,19 @@
   <aside class="col-md-4">
     <section class="user_info">
       <p> <%= gravatar_for @user %> </p>
-       <%= "Name:" %> <%= @user.name %>
-      <%= "Surname:" %> <%= @user.surname %>
-       <%= "Age:" %> <%= @user.age %>
-       <%= "Email:" %> <%= @user.email %>
+      <span>  <%= "Name:" %> <%= @user.name %> </span>
+      <span><%= "Surname:" %> <%= @user.surname %></span>
+      <span> <%= "Age:" %> <%= @user.age %> </span>
+      <span> <%= "Email:" %> <%= @user.email %> </span>
     </section>
   </aside>
   <div class="col-md-8">
     <% if @user.catches.any? %>
+      <h3>Catches:</h3>
       <ol class="catches">
+
         <%= render @catches %>
+
       </ol>
     <% end %>
   </div>
