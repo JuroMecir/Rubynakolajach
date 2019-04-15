@@ -1,4 +1,4 @@
-
+=begin
 100000.times do |n|
   name  = Faker::Name.first_name
   surname = Faker::Name.last_name
@@ -12,7 +12,7 @@
                password: password)
 
 end
-
+=end
 
 users = User.order(:created_at).take(1000)
 5.times do
