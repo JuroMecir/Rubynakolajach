@@ -2,12 +2,12 @@
 
 one:
   name: MyString
-  location: MyString
   number: MyString
-  acreage: 1
+  acreage: 
+  owner: one
 
 two:
   name: MyString
-  location: MyString
   number: MyString
-  acreage: 1
+  acreage: 
+  owner: two

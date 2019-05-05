@@ -3,6 +3,7 @@ class CatchesController < ApplicationController
   before_action :logged_in_user, only: [:create, :destroy]
   before_action :correct_user,   only: :destroy
 
+
    def create
     @catch = current_user.catches.build(catch_params)
     if @catch.save
@@ -22,7 +23,7 @@ class CatchesController < ApplicationController
   end
 
   def catch_params
-    params.require(:catch).permit(:weight, :size)
+    params.require(:catch).permit(:weight, :size, :area_id, :fish_id, :bait_id, :methodf_id )
   end
 
   def correct_user

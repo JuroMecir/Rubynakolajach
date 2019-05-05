@@ -3,6 +3,9 @@ Add new catch...
   <%= render 'shared/error_messages', object: f.object %>
   <div class="field">
 
+    <%= f.label :fish_id %>
+    <%= f.collection_select :fish_id, Fish.all, :id, :name %>
+
     <%= f.label :size %>
     <%= f.number_field :size, class: 'form-control' %>
 
@@ -10,16 +13,13 @@ Add new catch...
     <%= f.number_field :weight, class: 'form-control' %>
 
     <%= f.label :area_id%>
-    <%= f.number_field :area_id, class: 'form-control' %>
-
-    <%= f.label :method_id %>
-    <%= f.number_field :method_id_id, class: 'form-control' %>
-
-    <%= f.label :time_id %>
-    <%= f.number_field :time_id_id, class: 'form-control' %>
+    <%= f.collection_select :area_id, Area.all, :id, :name %>
 
     <%= f.label :bait_id %>
-    <%= f.number_field :bait_id_id, class: 'form-control' %>
+    <%= f.collection_select :bait_id, Bait.all, :id, :name %>
+
+    <%= f.label :methodf_id %>
+    <%= f.collection_select :methodf_id, Methodf.all, :id, :name %>
 
 
   </div>

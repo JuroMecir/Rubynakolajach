@@ -1,5 +1,5 @@
 <li id="catch-<%= catch.id %>">
-  <span class="user"><%= link_to catch.user.name, catch.user %> caught fish.</span>
+  <span class="user"><%= link_to catch.user.name, catch.user %> caught <%=  catch.fish.name %>.</span>
   <span class="size">Size: <%=  catch.size %> cm,</span>
   <span class="size">Weight: <%=  catch.weight %> kg</span>
   <span class="timestamp">

@@ -1,2 +1,0 @@
-class MethodId < ApplicationRecord
-end

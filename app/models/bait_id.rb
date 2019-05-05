@@ -1,2 +1,0 @@
-class BaitId < ApplicationRecord
-end

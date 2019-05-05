@@ -12,7 +12,7 @@
                password: password)
 
 end
-=end
+
 
 users = User.order(:created_at).take(1000)
 5.times do
@@ -33,4 +33,17 @@ users = User.order(:created_at).take(1000)
 end
 
 
+=end
 
+100.times do |n|
+  p =Province.create!(name: Faker::Address.country)
+  #District.create!(name: Faker::Address.city, province_id: Faker::Number.between(1, 99))
+  #Area.create!(name: Faker::Address.city, number: Faker::Number.between(1000000, 9999999),acreage: Faker::Number.between(100, 999999), owner: Faker::Number.between(1, 99))
+  #Owner.create!(name: Faker::Name.name, distrsict: Faker::Number.between(1, 99))
+  Bait.create!(name: Faker::Food.dish)
+  Fish.create!(name: Faker::Games::Witcher.monster)
+  Methodf.create!(name: Faker::Science.element)
+  pp = p.districts.create!(name: Faker::Address.city)
+  ppp= pp.owners.create!(name: Faker::Address.city)
+  ppp.areas.create!(name: Faker::Address.city, number: Faker::Number.between(1000000, 9999999),acreage: Faker::Number.between(100, 999999))
+end

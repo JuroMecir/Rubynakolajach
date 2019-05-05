@@ -1,9 +1,19 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  size: 1
-  weight: 1
+  user: one
+  area: one
+  fish: one
+  bait: one
+  method: one
+  size: 
+  weight: 
 
 two:
-  size: 1
-  weight: 1
+  user: two
+  area: two
+  fish: two
+  bait: two
+  method: two
+  size: 
+  weight: 

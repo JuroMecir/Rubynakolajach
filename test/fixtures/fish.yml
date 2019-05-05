@@ -2,8 +2,6 @@
 
 one:
   name: MyString
-  district: one
 
 two:
   name: MyString
-  district: two

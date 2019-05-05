@@ -1,2 +1,0 @@
-class TimeId < ApplicationRecord
-end
