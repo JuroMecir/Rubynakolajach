@@ -15,6 +15,14 @@ class CatchesController < ApplicationController
     end
   end
 
+  def show
+    @catch = Catch.find(params[:id])
+  end
+
+  def index
+    redirect_to root_url
+  end
+
   def destroy
     @catch.destroy
     flash[:success] = "Micropost deleted"

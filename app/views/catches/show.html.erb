@@ -1,0 +1,15 @@
+<% provide(:title, @catch.user.name) %>
+
+<div class="row">
+    <section class="catcch_info">
+      <div> <span>  <%= "Fisherman:" %> <%= @catch.user.name%> <%= @catch.user.surname %> </span></div>
+      <div><span>  <%= "Fish:" %> <%= @catch.fish.name%>  </span></div>
+      <div><span>  <%= "Weight:" %> <%= @catch.weight%>  </span></div>
+      <div><span>  <%= "Length:" %> <%= @catch.size%>  </span></div>
+      <div><span>  <%= "Area:" %> <%= @catch.area.name%>  </span></div>
+      <div><span>  <%= "Bait:" %> <%= @catch.bait.name%>  </span></div>
+      <div><span>  <%= "Method:" %> <%= @catch.methodf.name%>  </span></div>
+      <div><span>  <%= "Date:" %> <%= @catch.created_at%>  </span></div>
+    </section>
+  </aside>
+</div>

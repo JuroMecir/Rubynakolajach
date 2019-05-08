@@ -4,7 +4,7 @@ Add new catch...
   <div class="field">
 
     <%= f.label :fish_id %>
-    <%= f.collection_select :fish_id, Fish.all, :id, :name %>
+    <%= f.collection_select :fish_id, Fish.all, :id, :name, :include_blank => true %>
 
     <%= f.label :size %>
     <%= f.number_field :size, class: 'form-control' %>
@@ -13,13 +13,13 @@ Add new catch...
     <%= f.number_field :weight, class: 'form-control' %>
 
     <%= f.label :area_id%>
-    <%= f.collection_select :area_id, Area.all, :id, :name %>
+    <%= f.collection_select :area_id, Area.all, :id, :name, :include_blank => true %>
 
     <%= f.label :bait_id %>
-    <%= f.collection_select :bait_id, Bait.all, :id, :name %>
-
+    <%= f.collection_select :bait_id, Bait.all, :id, :name, :include_blank => true %>
+    
     <%= f.label :methodf_id %>
-    <%= f.collection_select :methodf_id, Methodf.all, :id, :name %>
+    <%= f.collection_select :methodf_id, Methodf.all, :id, :name, :include_blank => true %>
 
 
   </div>

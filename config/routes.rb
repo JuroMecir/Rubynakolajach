@@ -9,10 +9,11 @@ Rails.application.routes.draw do
   get '/login', to:'sessions#new'
   post '/login', to: 'sessions#create'
   delete 'logout', to:'sessions#destroy'
-  get '/catches', to:'fisherman_friend#home'
+  #get '/catches/', to:'catches#show'
   root 'fisherman_friend#home'
 
+
   resources :users
-  resources :catches,          only: [:create, :destroy]
+  resources :catches
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
