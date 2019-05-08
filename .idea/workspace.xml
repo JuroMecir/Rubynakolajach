@@ -3,13 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0f5d6f1b-50e6-4a88-ae6f-ede6b7cd8940" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/fisherman_friend_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/fisherman_friend_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/helpers/bait_ids_helper.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/helpers/fish_ids_helper.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/helpers/method_ids_helper.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/helpers/time_ids_helper.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/fisherman_friend/home.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/fisherman_friend/home.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/users/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/users/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -60,11 +54,13 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor />
+              <first_editor relative-caret-position="304">
+                <caret line="31" column="44" selection-start-line="31" selection-start-column="44" selection-end-line="31" selection-end-column="44" />
+              </first_editor>
               <second_editor />
             </state>
           </provider>
@@ -75,6 +71,24 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="272">
               <caret line="21" column="82" selection-start-line="21" selection-start-column="82" selection-end-line="21" selection-end-column="82" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/catches/show.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" column="55" selection-start-line="11" selection-start-column="55" selection-end-line="11" selection-end-column="55" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/db/schema.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1051">
+              <caret line="100" lean-forward="true" selection-start-line="17" selection-start-column="1" selection-end-line="100" />
             </state>
           </provider>
         </entry>
@@ -115,24 +129,6 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/shared/_catch_form.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="9" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db/seeds.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="986">
-              <caret line="58" selection-start-line="58" selection-end-line="58" />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -158,7 +154,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/db/migrate/20190329142810_addforeign.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20190401120943_addingpd.rb" />
         <option value="$PROJECT_DIR$/app/helpers/users_helper.rb" />
         <option value="$PROJECT_DIR$/app/views/shared/_error_messages.html" />
@@ -198,7 +193,6 @@
         <option value="$PROJECT_DIR$/app/models/user.rb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/custom.scss" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
-        <option value="$PROJECT_DIR$/app/views/catches/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/users/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/catches_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/shared/_catch_form.html.erb" />
@@ -209,6 +203,8 @@
         <option value="$PROJECT_DIR$/app/views/users/index.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/fisherman_friend_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/fisherman_friend/home.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/catches/show.html.erb" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -528,12 +524,12 @@
       <workItem from="1557301518019" duration="6154000" />
       <workItem from="1557309283612" duration="3956000" />
       <workItem from="1557316104490" duration="8939000" />
-      <workItem from="1557326753482" duration="9289000" />
+      <workItem from="1557326753482" duration="14070000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="173568000" />
+    <option name="totallyTimeSpent" value="178349000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -546,14 +542,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49898168" visible="true" weight="0.32214764" />
       <window_info id="Structure" order="1" sideWeight="0.50101835" side_tool="true" weight="0.27114093" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49701494" weight="0.33144477" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.75369126" visible="true" weight="0.3186969" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.75369126" weight="0.23796034" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49925372" weight="0.39943343" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -562,7 +557,7 @@
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.3286119" />
       <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.47986576" weight="0.3045326" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.24630873" side_tool="true" visible="true" weight="0.3186969" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.24630873" side_tool="true" visible="true" weight="0.23796034" />
       <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.49925372" weight="0.3295129" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -763,16 +758,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/catches/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="22" selection-start-column="22" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/schema.rb">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/shared/_catch_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -841,11 +826,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/catches/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="55" selection-start-line="11" selection-start-column="55" selection-end-line="11" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor />
+          <first_editor relative-caret-position="304">
+            <caret line="31" column="44" selection-start-line="31" selection-start-column="44" selection-end-line="31" selection-end-column="44" />
+          </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/schema.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1051">
+          <caret line="100" lean-forward="true" selection-start-line="17" selection-start-column="1" selection-end-line="100" />
         </state>
       </provider>
     </entry>
