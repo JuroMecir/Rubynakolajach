@@ -1,3 +1,14 @@
+<html>
+<head>
+  <style>
+    table, th, td {
+      border: 1px solid black;
+    }
+  </style>
+</head>
+
+
+
 <% if logged_in? %>
   <div class="row">
     <aside class="col-md-4">
@@ -25,5 +36,63 @@
   <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
 </div>
 
-<%= video_tag "gifik.mp4", :size => "320x240", :controls => true %>
+  Best places for carp fishing:
+
+  <body>
+  <table style="width:50%">
+    <tr>
+      <th>Area</th>
+      <th>Count</th>
+
+
+      <% @carp_places.each do |place| %>
+      <tr>
+        <td> <%=place['name'] %> </td>
+        <td> <%=place['count'] %></td>
+      </tr>
+    <% end %>
+    </tr>
+  </table>
+  </body>
+
+
+  Fish caught on Lake Javier:
+
+  <body>
+  <table style="width:50%">
+    <tr>
+      <th>Fish</th>
+      <th>Count</th>
+
+
+      <% @Lake_Javier_fish.each do |fish| %>
+      <tr>
+        <td> <%=fish['name'] %> </td>
+        <td> <%=fish['count'] %></td>
+      </tr>
+    <% end %>
+    </tr>
+  </table>
+  </body>
+
+  Best bait for pike fishing:
+
+  <body>
+  <table style="width:50%">
+    <tr>
+      <th>Bait</th>
+      <th>Count</th>
+
+
+      <% @Pike_baits.each do |bait| %>
+      <tr>
+        <td> <%=bait['name'] %> </td>
+        <td> <%=bait['count'] %></td>
+      </tr>
+    <% end %>
+    </tr>
+  </table>
+  </body>
 <%end %>
+
+</html>
