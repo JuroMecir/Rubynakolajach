@@ -9,9 +9,7 @@ Search for user:
   <%= submit_tag 'Search', class: "btn btn-primary"%>
 <% end %>
 
-
 <%= will_paginate %>
-
 <ul class="users">
   <% @users.each do |user| %>
     <li>

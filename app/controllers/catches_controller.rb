@@ -38,5 +38,4 @@ class CatchesController < ApplicationController
     @catch = current_user.catches.find_by(id: params[:id])
     redirect_to root_url if @catch.nil?
   end
-
 end

@@ -1,3 +1,0 @@
-class TimeIdsController < ApplicationController
-
-end

@@ -46,8 +46,12 @@ class UsersController < ApplicationController
   end
 
   def destroy
-    User.find(params[:id]).destroy
-    flash[:success] = "Account deleted"
+    ActiveRecord::Base.connection.execute(
+        "BEGIN;
+        DELETE FROM catches WHERE catches.user_id = '#{current_user.id}';
+        DELETE FROM users WHERE users.id = '#{current_user.id}';
+        COMMIT;"
+    )
     redirect_to home_url
   end
 

@@ -33,17 +33,47 @@ users = User.order(:created_at).take(1000)
 end
 
 
+
+
+Fish.create!(name: "Asp")
+Fish.create!(name: "Eel")
+Fish.create!(name: "Pike")
+Fish.create!(name: "Catfish")
+Fish.create!(name: "Carp")
+Fish.create!(name: "Chub")
+Fish.create!(name: "Zander")
+Fish.create!(name: "Trout")
+Fish.create!(name: "Sturgeon")
+Fish.create!(name: "Tench")
+Fish.create!(name: "Greyling")
+Fish.create!(name: "Burbot")
+Fish.create!(name: "Barbus")
+Fish.create!(name: "Bream")
+Fish.create!(name: "Nase")
+Fish.create!(name: "Charr")
+Fish.create!(name: "Grass Carp")
+Fish.create!(name: "Silver Carp")
+Fish.create!(name: "Whitefish")
+Fish.create!(name: "Danube Salmon")
+
+
+
+
+Methodf.create!(name: "Float Fishing")
+Methodf.create!(name: "Fly Fishing")
+Methodf.create!(name: "Heavy Fishing")
+Methodf.create!(name: "Jigging")
+
+
+Bait.create!(name: "Corn")
+Bait.create!(name: "Bread")
+Bait.create!(name: "Boilies")
+Bait.create!(name: "Worm")
+Bait.create!(name: "Small fish")
+Bait.create!(name: "Jig")
+Bait.create!(name: "Fly")
+Bait.create!(name: "Twister")
+
 =end
 
-100.times do |n|
-  p =Province.create!(name: Faker::Address.country)
-  #District.create!(name: Faker::Address.city, province_id: Faker::Number.between(1, 99))
-  #Area.create!(name: Faker::Address.city, number: Faker::Number.between(1000000, 9999999),acreage: Faker::Number.between(100, 999999), owner: Faker::Number.between(1, 99))
-  #Owner.create!(name: Faker::Name.name, distrsict: Faker::Number.between(1, 99))
-  Bait.create!(name: Faker::Food.dish)
-  Fish.create!(name: Faker::Games::Witcher.monster)
-  Methodf.create!(name: Faker::Science.element)
-  pp = p.districts.create!(name: Faker::Address.city)
-  ppp= pp.owners.create!(name: Faker::Address.city)
-  ppp.areas.create!(name: Faker::Address.city, number: Faker::Number.between(1000000, 9999999),acreage: Faker::Number.between(100, 999999))
-end
+

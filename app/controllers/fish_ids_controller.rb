@@ -1,2 +1,0 @@
-class FishIdsController < ApplicationController
-end

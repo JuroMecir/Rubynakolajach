@@ -1,2 +1,0 @@
-class BaitIdsController < ApplicationController
-end
