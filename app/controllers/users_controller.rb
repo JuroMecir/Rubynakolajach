@@ -13,7 +13,7 @@ class UsersController < ApplicationController
   end
 
   def index
-    @users = User.paginate(page: params[:page])
+    @users = User.search(params[:search]).paginate(page: params[:page])
   end
 
   def current_user?(user)
@@ -54,8 +54,7 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:name, :email, :password,
-                                 :surname, :age)
+    params.require(:user).permit(:name, :email, :password, :surname, :age)
   end
 
   def logged_in_user

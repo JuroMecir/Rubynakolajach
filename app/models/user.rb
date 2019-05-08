@@ -23,5 +23,13 @@ class User < ApplicationRecord
     BCrypt::Password.create(string, cost: cost)
   end
 
+  def self.search(search)
+    if search
+      where(["name LIKE ? ","%#{search}%"]).or(where(["surname LIKE ? ","%#{search}%"]))
+    else
+      all
+    end
+
+  end
 
 end
