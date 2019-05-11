@@ -9,7 +9,7 @@ class FishermanFriendController < ApplicationController
     @population_on_acre =  ActiveRecord::Base.connection.exec_query("SELECT a.name,100 * count(*)/ a.acreage count FROM areas a
                                                                       join catches c on a.id = c.area_id
                                                                       group by a.id
-                                                                      order by 100 * count(*)/a.acreage desc")
+                                                                      order by 100 * count(*)/a.acreage desc LIMIT 10")
     @countu = ActiveRecord::Base.connection.exec_query("SELECT count(*) FROM users")
     @countc = ActiveRecord::Base.connection.exec_query("SELECT count(*) FROM catches")
 =begin
