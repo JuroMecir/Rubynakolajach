@@ -25,7 +25,7 @@ class CatchesController < ApplicationController
 
   def destroy
     @catch.destroy
-    flash[:success] = "Micropost deleted"
+    flash[:success] = "Catch deleted"
     redirect_to request.referrer || root_url
 
   end

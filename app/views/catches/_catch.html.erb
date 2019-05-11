@@ -3,8 +3,7 @@
   <span class="timestamp">
     Date: <%=  (catch.created_at) %> .
     <% if current_user?(catch.user) %>
-      <%= link_to  "Show details", catch %>
-      <%= link_to "delete",catch, method: :delete,
+      <%= link_to "Delete",catch, method: :delete,
                   data: { confirm: "You sure?" } %>
     <% end %>
     <%= link_to  "Show details", catch %>

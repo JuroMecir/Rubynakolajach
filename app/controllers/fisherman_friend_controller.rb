@@ -1,7 +1,18 @@
 class FishermanFriendController < ApplicationController
 
 
+  def search
+
+  end
+
   def home
+    @population_on_acre =  ActiveRecord::Base.connection.exec_query("SELECT a.name,100 * count(*)/ a.acreage count FROM areas a
+                                                                      join catches c on a.id = c.area_id
+                                                                      group by a.id
+                                                                      order by 100 * count(*)/a.acreage desc")
+    @countu = ActiveRecord::Base.connection.exec_query("SELECT count(*) FROM users")
+    @countc = ActiveRecord::Base.connection.exec_query("SELECT count(*) FROM catches")
+=begin
     @carp_places = ActiveRecord::Base.connection.exec_query("SELECT a.name, COUNT(*) FROM catches c
                                                     JOIN fish f on c.fish_id = f.id
                                                     JOIN areas a on c.area_id = a.id
@@ -20,6 +31,7 @@ class FishermanFriendController < ApplicationController
                                                             where f.name = 'Pike'
                                                             group by b.id
                                                             order by count(*) desc")
+=end
     if logged_in?
       @catch  = current_user.catches.build
       @feed_items = current_user.feed.paginate(page: params[:page])

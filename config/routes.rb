@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get '/help', to: 'fisherman_friend#help'
   get '/about', to: 'fisherman_friend#about'
   get '/contact', to: 'fisherman_friend#contact'
+  get '/search', to: 'fisherman_friend#search'
   get  '/signup',  to: 'users#new'
   post '/signup', to:'users#create'
   get '/login', to:'sessions#new'
