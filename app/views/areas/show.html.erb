@@ -29,22 +29,23 @@
 <div class="row">
   <aside class="col-md-4">
     <section class="area_info">
-      <span><%= "Name:" %> <%= @area.name %> </span>
-      <span><%= "Acreage:" %> <%= @area.acreage %> </span>
-      <span><%= "Number:" %> <%= @area.number %> </span>
-      <span><%= "Organization name:" %> <%= @area.owner.name %></span>
-      <span><%= "District name:" %> <%= @area.owner.district.name %></span>
-      <span><%= "Province name:" %> <%= @area.owner.district.province.name %></span>
+      <span><b><%= "Name:" %> </b> <%= @area.name %> </span>
+      <span><b><%= "Acreage:" %></b> <%= @area.acreage %> </span>
+      <span><b><%= "Number:" %></b> <%= @area.number %> </span>
+      <span><b><%= "Organization name:" %></b> <%= @area.owner.name %></span>
+      <span><b><%= "District name:" %></b> <%= @area.owner.district.name %></span>
+      <span><b><%= "Province name:" %></b> <%= @area.owner.district.province.name %></span>
     </section>
   </aside>
   <% if @fish_population.any? %>
 
   <div class="col-md-8">
+    <b> Population in area:</b>
     <body>
     <table style="width:50%">
       <tr>
         <th>Area name</th>
-        <th>Fishes caught</th>
+        <th>Fish caught</th>
           <% @fish_population.each do |record| %>
             <tr>
             <td> <%=record['name'] %> </td>

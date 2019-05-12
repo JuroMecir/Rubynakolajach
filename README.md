@@ -29,8 +29,13 @@
  
  **Využite relačnej databázy:**
  
- + GROUP BY, JOIN, Agregačná funkcia (COUNT,) - Sú použité na vytváranie tabuliek. 
+ + GROUP BY, JOIN, Agregačná funkcia (COUNT) - Sú použité na vytváranie tabuliek. 
  
  + Transakcia - Väčšinu transkakcií si ruby rieši sám, no jednu transakciu som urobil navyše. Využíva sa pri zrušení účtu,
   kde pri zrušení účtu sú z databázy taktiež odstránené používateľove záznamy.
+  
+  
+**Fyzický dátový model**
+<img src="D:\VOS\app\assets\images\Model_db.jpg">
+![](app\assets\images\Model_db.jpg?raw=truw)
  

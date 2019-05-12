@@ -13,9 +13,12 @@ Search for user:
 <ul class="users">
   <% @users.each do |user| %>
     <li>
+      <aside class="col-md-10">
+        Name:<%= user.name %> <%=user.surname %> <br>
+        E-mail:<%= user.email %><br>
+        Age:<%= user.age %>
+      </aside>
       <%= link_to  'Show', user, class: "btn btn-primary" %>
-      Name:<%= user.name %> <%=user.surname %>
-      E-mail:<%= user.email %>
     </li>
 
 

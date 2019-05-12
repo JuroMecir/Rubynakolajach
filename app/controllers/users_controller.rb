@@ -13,7 +13,7 @@ class UsersController < ApplicationController
   end
 
   def index
-    @users = User.search(params[:search]).paginate(page: params[:page])
+    @users = User.search(params[:search]).paginate(page: params[:page]).order('id DESC')
   end
 
   def current_user?(user)

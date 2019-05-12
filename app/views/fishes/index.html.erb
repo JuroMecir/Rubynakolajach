@@ -1,8 +1,10 @@
 <ul class="users">
   <% @fishes.each do |fish| %>
     <li>
-      <%= link_to  'Show', fish, class: "btn btn-primary" %>
-      Name:<%= fish.name %>
+      <aside class="col-md-10">
+        <b>Name:</b><%= fish.name %>
+      </aside>
+      <%= link_to  'Show details', fish, class: "btn btn-primary" %>
     </li>
 
 
