@@ -2,9 +2,11 @@
 <ul class="users">
   <% @areas.each do |area| %>
     <li>
+      <aside class="col-md-10">
+        Area Name:<%= area.name %> <br>
+        Owner:<%=area.owner.name%> <br>
+      </aside>
       <%= link_to  'Show', area, class: "btn btn-primary" %>
-      Name:<%= area.name %>
-      Owner:<%=area.owner.name%>
     </li>
 
 

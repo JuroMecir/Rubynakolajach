@@ -56,7 +56,7 @@ ActiveRecord::Schema.define(version: 2019_05_05_120740) do
     t.index ["province_id"], name: "index_districts_on_province_id"
   end
 
-  create_table "fish", force: :cascade do |t|
+  create_table "fishes", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -93,7 +93,7 @@ ActiveRecord::Schema.define(version: 2019_05_05_120740) do
   end
 
   add_foreign_key "catches", "baits"
-  add_foreign_key "catches", "fish"
+  add_foreign_key "catches", "fishes"
   add_foreign_key "catches", "methodfs"
   add_foreign_key "catches", "users"
   add_foreign_key "owners", "districts"

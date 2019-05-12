@@ -1,0 +1,12 @@
+<ul class="users">
+  <% @fishes.each do |fish| %>
+    <li>
+      <%= link_to  'Show', fish, class: "btn btn-primary" %>
+      Name:<%= fish.name %>
+    </li>
+
+
+  <% end %>
+
+</ul>
+

@@ -1,0 +1,77 @@
+<html>
+<head>
+  <style>
+
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th {
+      background-color: #337ab7 ;
+      color: white
+    }
+
+    td, th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+
+    tr:nth-child(even) {
+      background-color: Aliceblue;
+    }
+  </style>
+</head>
+
+<div class="col-md-8">
+  <body>
+  <table style="width:50%">
+    <tr>
+      <th>Area name</th>
+      <th> <%= @fish.name %> caught</th>
+      <% @area.each do |record| %>
+      <tr>
+        <td> <%=record['name'] %> </td>
+        <td> <%=record['count'] %></td>
+      </tr>
+    <% end %>
+    </tr>
+  </table>
+  </body>
+</div>
+
+<div class="col-md-8">
+  <body>
+  <table style="width:50%">
+    <tr>
+      <th>Bait name</th>
+      <th> <%= @fish.name %> caught</th>
+      <% @bait.each do |record| %>
+      <tr>
+        <td> <%=record['name'] %> </td>
+        <td> <%=record['count'] %></td>
+      </tr>
+    <% end %>
+    </tr>
+  </table>
+  </body>
+</div>
+
+<div class="col-md-8">
+  <body>
+  <table style="width:50%">
+    <tr>
+      <th>Method name</th>
+      <th> <%= @fish.name %> caught</th>
+      <% @method.each do |record| %>
+      <tr>
+        <td> <%=record['name'] %> </td>
+        <td> <%=record['count'] %></td>
+      </tr>
+    <% end %>
+    </tr>
+  </table>
+  </body>
+</div>
