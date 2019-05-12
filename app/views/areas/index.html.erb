@@ -1,0 +1,15 @@
+<%= will_paginate %>
+<ul class="users">
+  <% @areas.each do |area| %>
+    <li>
+      <%= link_to  'Show', area, class: "btn btn-primary" %>
+      Name:<%= area.name %>
+      Owner:<%=area.owner.name%>
+    </li>
+
+
+  <% end %>
+
+</ul>
+
+<%= will_paginate %>

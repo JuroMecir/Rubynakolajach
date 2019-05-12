@@ -1,9 +1,6 @@
 class FishermanFriendController < ApplicationController
 
 
-  def search
-
-  end
 
   def home
     @population_on_acre =  ActiveRecord::Base.connection.exec_query("SELECT a.name,100 * count(*)/ a.acreage count FROM areas a
