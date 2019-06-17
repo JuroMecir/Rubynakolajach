@@ -30,11 +30,10 @@
   <aside class="col-md-4">
     <section class="area_info">
       <span><b><%= "Name:" %> </b> <%= @area.name %> </span>
-      <span><b><%= "Acreage:" %></b> <%= @area.acreage %> </span>
+      <span><b><%= "Acreage:" %></b> <%= @area.acreage %> ha </span>
       <span><b><%= "Number:" %></b> <%= @area.number %> </span>
-      <span><b><%= "Organization name:" %></b> <%= @area.owner.name %></span>
-      <span><b><%= "District name:" %></b> <%= @area.owner.district.name %></span>
-      <span><b><%= "Province name:" %></b> <%= @area.owner.district.province.name %></span>
+      <span><b><%= "Organizacia:" %></b> <%= @area.owner %> </span>
+      <span><b><%= "kraj:" %></b> <%= @area.region %> </span>
     </section>
   </aside>
   <% if @fish_population.any? %>

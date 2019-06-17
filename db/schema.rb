@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_05_120740) do
+ActiveRecord::Schema.define(version: 2019_06_17_085840) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,10 +19,10 @@ ActiveRecord::Schema.define(version: 2019_05_05_120740) do
     t.string "name"
     t.string "number"
     t.integer "acreage"
-    t.bigint "owner_id"
+    t.string "owner"
+    t.string "region"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["owner_id"], name: "index_areas_on_owner_id"
   end
 
   create_table "baits", force: :cascade do |t|
@@ -48,15 +48,7 @@ ActiveRecord::Schema.define(version: 2019_05_05_120740) do
     t.index ["user_id"], name: "index_catches_on_user_id"
   end
 
-  create_table "districts", force: :cascade do |t|
-    t.string "name"
-    t.bigint "province_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["province_id"], name: "index_districts_on_province_id"
-  end
-
-  create_table "fishes", force: :cascade do |t|
+  create_table "fish", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -68,33 +60,19 @@ ActiveRecord::Schema.define(version: 2019_05_05_120740) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "owners", force: :cascade do |t|
-    t.string "name"
-    t.bigint "district_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["district_id"], name: "index_owners_on_district_id"
-  end
-
-  create_table "provinces", force: :cascade do |t|
-    t.string "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "users", force: :cascade do |t|
     t.string "name"
     t.string "surname"
     t.integer "age"
     t.string "email"
+    t.string "password_digest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "password_digest"
   end
 
+  add_foreign_key "catches", "areas"
   add_foreign_key "catches", "baits"
-  add_foreign_key "catches", "fishes"
+  add_foreign_key "catches", "fish"
   add_foreign_key "catches", "methodfs"
   add_foreign_key "catches", "users"
-  add_foreign_key "owners", "districts"
 end

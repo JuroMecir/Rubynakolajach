@@ -74,6 +74,105 @@ Bait.create!(name: "Jig")
 Bait.create!(name: "Fly")
 Bait.create!(name: "Twister")
 
+
+
+require 'open-uri'
+require 'nokogiri'
+
+
+
+
+
+
 =end
+
+
+
+
+def search_r(query)
+  i=1
+  while i < 30 do
+    search_html = open("https://www.kamnaryby.sk/kategoria/#{query}&page=#{i}").read
+    doc = Nokogiri::HTML(search_html)
+    #puts (doc)
+    puts ('parsujem?\n')
+    doc.search(' h2 > a').map do |movie_link|
+      process_r("https://www.kamnaryby.sk#{movie_link[:href]}").to_s
+      #puts(movie_link)
+    end
+    i = i+1
+  end
+end
+
+def process_r(link)
+  doc = Nokogiri::HTML(open(link))
+
+  name = doc.search('div[class="revir-jeden"] div[class="nazov"]').first.text.strip
+  humus = doc.search('table[class="table info-revir table-hover"]').first.text.strip
+  # meno reviru sak preco ne
+  name.slice!"Revír"
+  i = 0
+  revir = ''
+  while name[i] != '|'
+    revir = revir+name[i]
+    i = i+1
+  end
+  #
+  humus.slice!"Číslo revíru:"
+  humus.strip!
+  i = 0
+  cislor = ''
+  while humus[i] != "\n"
+    if humus[i] == 'R'
+      cislor = ''
+      humus[i] = ' '
+    else
+      cislor = cislor+humus[i]
+      humus[i] = ' '
+      i = i+1
+    end
+  end
+
+  humus.strip!
+  humus.slice!"Rozloha:"
+  humus.slice!"ozloha:"
+  humus.strip!
+  i = 0
+  rozloha = ''
+  while humus[i] != "\n"
+    rozloha = rozloha+humus[i]
+    humus[i] = ' '
+    i = i+1
+  end
+  rozloha.slice!"\n"
+
+  humus.strip!
+  humus.slice!"Organizácia:"
+  humus.strip!
+  i = 0
+  vlastnik = ''
+  while humus[i] != "\n"
+    vlastnik = vlastnik+humus[i]
+    humus[i] = ' '
+    i = i+1
+  end
+
+  # puts(humus)
+  if cislor != nil
+    cislor.strip!
+  end
+  if rozloha != nil
+    rozloha.strip!
+  end
+  if revir == nil
+    revir = '0'
+  end
+  puts(' nazov reviru:' + revir + '   cislo reviru:' + cislor + '   rozloha reviru:' + rozloha + '  vlastnik: ' + vlastnik )
+  Area.create!(name: revir, number: cislor, acreage: rozloha, owner: vlastnik, region: 'Trenčiansky kraj' )
+end
+
+search_r('trenciansky-kraj')
+
+
 
 

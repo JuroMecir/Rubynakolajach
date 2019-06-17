@@ -1,11 +1,29 @@
-class CreateCatches < ActiveRecord::Migration[5.2]
+class GeneratingTablesForProduction < ActiveRecord::Migration[5.2]
   def change
+    create_table :fish do |t|
+      t.string :name
+
+      t.timestamps
+    end
+
+    create_table :baits do |t|
+      t.string :name
+
+      t.timestamps
+    end
+
+    create_table :methodfs do |t|
+      t.string :name
+
+      t.timestamps
+    end
+
     create_table :users do |t|
       t.string :name
       t.string :surname
       t.integer :age
       t.string :email
-      t.string :password
+      t.string :password_digest
 
       t.timestamps
     end
