@@ -3,14 +3,14 @@
   <h1>Revíry</h1>
 </div>
 
-<ul class="users">
+<ul class="users" >
   <% @areas.each do |area| %>
     <li>
       <aside class="col-md-10">
-        Area Name:<%= area.name %> <br>
+       Názov revíru:<%= area.name %> <br>
 
       </aside>
-      <%= link_to  'Show', area, class: "btn btn-primary" %>
+      <%= link_to  'Ukáž detaily', area, class: "btn btn-primary" %>
     </li>
 
 

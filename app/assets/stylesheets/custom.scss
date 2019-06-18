@@ -1,6 +1,24 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+[class*="container2"] {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: rgba(86, 61, 124, .15);
+  border: 1px solid rgba(86, 61, 124, .2);
+}
+
+
+
+
+
+.boxed {
+  border-style: outset ;
+  height: 80px;
+  width: 30%;
+  margin-bottom: 10px;
+}
+
 
 .navbar {
   height: 80px;
@@ -13,7 +31,7 @@
 }
 
 .carousel{
-  background: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+  background: #337ab7;
   height: 150px;
   margin-bottom: 15px;
 }
@@ -113,6 +131,7 @@ h2 {
 h3 {
   font-size: 1em;
   margin-bottom: 30px;
+  margin-top: 30px;
   text-align: center;
   font-weight: normal;
 

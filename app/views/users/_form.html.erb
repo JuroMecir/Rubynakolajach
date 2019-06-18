@@ -1,19 +1,19 @@
 <%= form_for(@user) do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
 
-  <%= f.label :name %>
+  <%= f.label 'Meno' %>
   <%= f.text_field :name, class: 'form-control' %>
 
-  <%= f.label :surname %>
+  <%= f.label 'Priezvisko' %>
   <%= f.text_field :surname, class: 'form-control' %>
 
-  <%= f.label :age %>
+  <%= f.label 'Vek' %>
   <%= f.text_field :age, class: 'form-control' %>
 
-  <%= f.label :email %>
+  <%= f.label 'E-mail' %>
   <%= f.email_field :email, class: 'form-control' %>
 
-  <%= f.label :password %>
+  <%= f.label 'Heslo' %>
   <%= f.password_field :password, class: 'form-control' %>
 
   <%= f.submit yield(:button_text), class: "btn btn-primary" %>

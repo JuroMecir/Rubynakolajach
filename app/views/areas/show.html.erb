@@ -1,35 +1,37 @@
-<html>
+<center>
+  <h1>
+    <%= @area.name %>
+  </h1>
+</center>
 
-<div class="row">
-  <aside class="col-md-4">
-    <section class="area_info">
-      <span><b><%= "Meno:" %> </b> <%= @area.name %> </span>
-      <span><b><%= "Rozloha:" %></b> <%= @area.acreage %> ha </span>
-      <span><b><%= "Číslo revíru:" %></b> <%= @area.number %> </span>
-      <span><b><%= "Organizacia:" %></b> <%= @area.owner %> </span>
-      <span><b><%= "Región:" %></b> <%= @area.region %> </span>
-    </section>
-  </aside>
+  <div class="container" align="center">
+    <b>Meno revíru: </b> <%= @area.name %> <br>
+    <b> Rozloha:</b> <%= @area.acreage %> ha <br>
+    <b>Číslo revíru:</b> <%= @area.number %><br>
+    <b>Organizacia:</b> <%= @area.owner %><br>
+    <b>Región:</b> <%= @area.region %> <br>
+
+
   <% if @fish_population.any? %>
-
-  <div class="col-md-8">
+  <div class="container" align="center"></div>
     <b> Počet rýb ulovených v revíre:</b>
     <body>
-    <table style="width:50%">
-      <tr>
-        <th>Area name</th>
-        <th>Fish caught</th>
-          <% @fish_population.each do |record| %>
-            <tr>
-            <td> <%=record['name'] %> </td>
-            <td> <%=record['count'] %></td>
-            </tr>
-          <% end %>
-      </tr>
-    </table>
+     <table style="width:50%">
+        <tr>
+          <th>Druh ryby</th>
+          <th>Počet úlovkov</th>
+            <% @fish_population.each do |record| %>
+              <tr>
+                <td> <%=record['name'] %> </td>
+                <td> <%=record['count'] %></td>
+              </tr>
+            <% end %>
+        </tr>
+      </table>
     </body>
-  </div>
+      </div>
     <% else %>
-  No catches in this area!
+      <h3>O tomto revíre žiaľ nemáme žiadne záznamy. </h3>
     <% end %>
 </div>
+

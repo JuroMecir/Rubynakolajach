@@ -1,27 +1,27 @@
-Add new catch...
+Pridaj svoj úlovok...
 <%= form_for(@catch) do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
   <div class="field">
 
-    <%= f.label :fish_id %>
+    <%= f.label 'Ryba' %>
     <%= f.collection_select :fish_id, Fish.all, :id, :name, :include_blank => true %>
 
-    <%= f.label :size %>
+    <%= f.label 'Veľkosť' %>
     <%= f.number_field :size, class: 'form-control' %>
 
-    <%= f.label :weight %>
+    <%= f.label 'Váha' %>
     <%= f.number_field :weight, class: 'form-control' %>
 
-    <%= f.label :area_id%>
+    <%= f.label 'Revír'%>
     <%= f.collection_select :area_id, Area.all, :id, :name, :include_blank => true %>
 
-    <%= f.label :bait_id %>
+    <%= f.label 'Návnada' %>
     <%= f.collection_select :bait_id, Bait.all, :id, :name, :include_blank => true %>
 
-    <%= f.label :methodf_id %>
+    <%= f.label 'Spôsob lovu' %>
     <%= f.collection_select :methodf_id, Methodf.all, :id, :name, :include_blank => true %>
 
 
   </div>
-  <%= f.submit "Create", class: "btn btn-primary" %>
+  <%= f.submit "Pridať", class: "btn btn-primary" %>
 <% end %>

@@ -1,14 +1,23 @@
-<div class="container"></div>
+
+<div class="container" align="center">
+  <h1>Ryby</h1>
+</div>
+  
+
+
+<ul class="users" >
   <% @fishes.each do |fish| %>
     <li>
-      <aside class="col-md-4">
-        <%= fish.name %>
+      <aside class="col-md-10">
+        Druh ryby:<%=link_to fish.name , fish%> <br>
+
       </aside>
-      <%= link_to  'Zobraz detaily', fish, class: "btn btn-primary" %>
+      <%= link_to  'Ukáž detaily', fish, class: "btn btn-primary" %>
     </li>
 
 
   <% end %>
 
-</div>
+</ul>
+
 
