@@ -8,12 +8,12 @@
     <b>Meno revíru: </b> <%= @area.name %> <br>
     <b> Rozloha:</b> <%= @area.acreage %> ha <br>
     <b>Číslo revíru:</b> <%= @area.number %><br>
-    <b>Organizacia:</b> <%= @area.owner %><br>
+    <b>Organizácia:</b> <%= @area.owner %><br>
     <b>Región:</b> <%= @area.region %> <br>
 
 
   <% if @fish_population.any? %>
-  <div class="container" align="center"></div>
+  <div class="container" align="center">
     <b> Počet rýb ulovených v revíre:</b>
     <body>
      <table style="width:50%">
@@ -33,5 +33,5 @@
     <% else %>
       <h3>O tomto revíre žiaľ nemáme žiadne záznamy. </h3>
     <% end %>
-</div>
+  </div>
 

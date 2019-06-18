@@ -1,14 +1,49 @@
 
 <div class="container" align="center">
   <h1>Revíry</h1>
+  <br>
+  <button class="btn btn-primary" data-toggle="modal" data-target="#approvalModal" align="center">
+    Vyhľadávanie
+  </button>
+  <br>
+  Vyhľadávanie hľadá podobnosti medzi Vašim výrazom a názvami organizácií a revírov.
+  <br>
+  <br>
 </div>
+
+
+
+
+
+<div class="modal fade" id="approvalModal" tabindex="-1" role="dialog" aria-labelledby="approvalModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title">Vyhľadávanie</h4>
+      </div>
+      <div class="modal-body" align="left">
+        <%= form_tag areas_path, :method => 'get', :class => "form-horizontal" do %>
+          Zadaj hľadaný výraz a stlač tlačidlo Vyhľadaj.
+          <%= text_field_tag :search, params[:search], :class => "form-control" %>
+          </div>
+          <div class="modal-footer">
+            <%= submit_tag "Vyhľadaj", name: nil, class: "btn btn-primary" %>
+        <% end %>
+        </div>
+        </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+
 
 <ul class="users" >
   <% @areas.each do |area| %>
     <li>
       <aside class="col-md-10">
-       Názov revíru:<%= area.name %> <br>
-
+       <b>Názov revíru:</b><%= area.name %> <br>
+         <b>Organizácia: </b><%= area.owner %>
       </aside>
       <%= link_to  'Ukáž detaily', area, class: "btn btn-primary" %>
     </li>

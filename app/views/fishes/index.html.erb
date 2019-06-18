@@ -9,7 +9,7 @@
   <% @fishes.each do |fish| %>
     <li>
       <aside class="col-md-10">
-        Druh ryby:<%=link_to fish.name , fish%> <br>
+        <b>Druh ryby: </b><%=link_to fish.name , fish%> <br>
 
       </aside>
       <%= link_to  'Ukáž detaily', fish, class: "btn btn-primary" %>

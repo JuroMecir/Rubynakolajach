@@ -1,7 +1,7 @@
 class AreasController < ApplicationController
 
   def index
-    @areas = Area.paginate(page: params[:page])
+    @areas = Area.search(params[:search]).paginate(page: params[:page])
   end
 
   def show
