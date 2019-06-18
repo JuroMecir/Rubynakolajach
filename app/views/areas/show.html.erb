@@ -1,45 +1,19 @@
 <html>
-<head>
-  <style>
-
-    table {
-      font-family: arial, sans-serif;
-      border-collapse: collapse;
-      width: 100%;
-    }
-
-    th {
-      background-color: #337ab7 ;
-      color: white
-    }
-
-    td, th {
-      border: 1px solid #dddddd;
-      text-align: left;
-      padding: 8px;
-    }
-
-    tr:nth-child(even) {
-      background-color: Aliceblue;
-    }
-  </style>
-</head>
-
 
 <div class="row">
   <aside class="col-md-4">
     <section class="area_info">
-      <span><b><%= "Name:" %> </b> <%= @area.name %> </span>
-      <span><b><%= "Acreage:" %></b> <%= @area.acreage %> ha </span>
-      <span><b><%= "Number:" %></b> <%= @area.number %> </span>
+      <span><b><%= "Meno:" %> </b> <%= @area.name %> </span>
+      <span><b><%= "Rozloha:" %></b> <%= @area.acreage %> ha </span>
+      <span><b><%= "Číslo revíru:" %></b> <%= @area.number %> </span>
       <span><b><%= "Organizacia:" %></b> <%= @area.owner %> </span>
-      <span><b><%= "kraj:" %></b> <%= @area.region %> </span>
+      <span><b><%= "Región:" %></b> <%= @area.region %> </span>
     </section>
   </aside>
   <% if @fish_population.any? %>
 
   <div class="col-md-8">
-    <b> Population in area:</b>
+    <b> Počet rýb ulovených v revíre:</b>
     <body>
     <table style="width:50%">
       <tr>

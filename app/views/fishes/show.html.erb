@@ -1,62 +1,66 @@
 <html>
-<head>
-  <style>
 
-    table {
-      font-family: arial, sans-serif;
-      border-collapse: collapse;
-      width: 100%;
-    }
+<center>
+  <h1>
+    <%= @fish.name %>
+  </h1>
+</center>
 
-    th {
-      background-color: #337ab7 ;
-      color: white
-    }
+<% if @area.any? %>
+  <div class="container" align="center" >
+    <b>Najväčší úlovok:</b>
+    <% @largest.each do |record| %>
+      <%=record['max'] %> cm
+    <% end %><br>
 
-    td, th {
-      border: 1px solid #dddddd;
-      text-align: left;
-      padding: 8px;
-    }
+    <b>Najťažší úlovok:</b>
+      <% @heaviest.each do |record| %>
+        <%=record['max'] %> kg
+      <% end %><br>
 
-    tr:nth-child(even) {
-      background-color: Aliceblue;
-    }
-  </style>
-</head>
 
-<aside class="col-md-4">
-  <div class="col-md-8">
-    <body>
-    <b> Best area for catching <%= @fish.name %>:</b>
+    <b>Priemerná dĺžka:</b>
+      <% @avgsize.each do |record| %>
+        <%=record['round'] %> cm
+      <% end %><br>
 
-    <table style="width:50%">
-     <tr>
-        <th>Area name</th>
-        <th> <%= @fish.name %> caught</th>
-          <% @area.each do |record| %>
-          <tr>
-          <td> <%=record['name'] %> </td>
-          <td> <%=record['count'] %></td>
-          </tr>
+
+    <b>Priemerná váha:</b>
+      <% @avgweight.each do |record| %>
+        <%=record['round'] %> kg
       <% end %>
-      </tr>
-    </table>
 
-    </body>
+
   </div>
-
-</aside>
-
-
-  <div class="col-md-8">
+  <div class="container" align="center">
     <body>
-    <b> Best bait for catching <%= @fish.name %>:</b>
+      <b> Najlepšie revíry na lov <%= @fish.name %>:</b>
+
+      <table style="width:50%">
+         <tr>
+          <th>Revír </th>
+          <th> Počet úlovkov</th>
+            <% @area.each do |record| %>
+              <tr>
+                <td> <%=record['name'] %> </td>
+                <td> <%=record['count'] %></td>
+              </tr>
+            <% end %>
+          </tr>
+      </table>
+    </body>
+
+
+
+
+
+    <body>
+    <b> Najlepšia návnada pre lov  <%= @fish.name %>:</b>
 
     <table style="width:50%">
       <tr>
-        <th>Bait name</th>
-        <th> <%= @fish.name %> caught</th>
+        <th>Návnada</th>
+        <th> Počet úlovkov</th>
         <% @bait.each do |record| %>
         <tr>
           <td> <%=record['name'] %> </td>
@@ -66,18 +70,18 @@
       </tr>
     </table>
     </body>
-  </div>
 
 
 
 
-<div class="col-md-8">
+
+
   <body>
-  <b> Best fishing method for catching <%= @fish.name %>:</b>
+  <b> Najlepší spôsob lovu pre lov <%= @fish.name %>:</b>
   <table style="width:50%">
     <tr>
-      <th>Method name</th>
-      <th> <%= @fish.name %> caught</th>
+      <th>Spôsob lovu</th>
+      <th> Počet úlovkov</th>
       <% @method.each do |record| %>
       <tr>
         <td> <%=record['name'] %> </td>
@@ -87,4 +91,13 @@
     </tr>
   </table>
   </body>
-</div>
+  </div>
+
+<%else %>
+  <div class="container" align="center">
+      <h3>
+          O tomto druhu ryby žiaľ nemáme žiadne údaje.
+      </h3>
+  </div>
+<%end %>
+</html>

@@ -1,14 +1,14 @@
-<ul class="users">
+<div class="container"></div>
   <% @fishes.each do |fish| %>
     <li>
-      <aside class="col-md-10">
-        <b>Name:</b><%= fish.name %>
+      <aside class="col-md-4">
+        <%= fish.name %>
       </aside>
-      <%= link_to  'Show details', fish, class: "btn btn-primary" %>
+      <%= link_to  'Zobraz detaily', fish, class: "btn btn-primary" %>
     </li>
 
 
   <% end %>
 
-</ul>
+</div>
 

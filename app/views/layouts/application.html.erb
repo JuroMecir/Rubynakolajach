@@ -10,6 +10,10 @@
 </head>
 <body>
 <%= render 'layouts/header' %>
+<% if current_page?('http://localhost:3000/home') or current_page?('http://localhost:3000/') %>
+  <%= render  "shared/carousel" %>
+<% end %>
+
 <div class="container">
 
   <% flash.each do |message_type, message| %>

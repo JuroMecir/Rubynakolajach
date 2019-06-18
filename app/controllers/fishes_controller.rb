@@ -22,6 +22,15 @@ class FishesController < ApplicationController
                                                       where c.fish_id = '#{@fish.id}'
                                                       group by m.name
                                                       order by count(*) desc LIMIT 10")
+    @heaviest = ActiveRecord::Base.connection.exec_query("SELECT max(c.weight) FROM catches c
+                                                      where c.fish_id = '#{@fish.id}'")
+    @largest = ActiveRecord::Base.connection.exec_query("SELECT max(c.size) FROM catches c
+                                                      where c.fish_id = '#{@fish.id}'")
+    @avgsize = ActiveRecord::Base.connection.exec_query("SELECT round(avg(c.size),1) FROM catches c
+                                                      where c.fish_id = '#{@fish.id}'")
+    @avgweight = ActiveRecord::Base.connection.exec_query("SELECT round(avg(c.weight),1) FROM catches c
+                                                      where c.fish_id = '#{@fish.id}'")
+
 
 
   end

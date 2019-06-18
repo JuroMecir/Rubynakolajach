@@ -3,9 +3,9 @@
   <span class="timestamp">
     Date: <%=  (catch.created_at) %> .
     <% if current_user?(catch.user) %>
-      <%= link_to "Delete",catch, method: :delete,
-                  data: { confirm: "You sure?" } %>
+      <%= link_to "Vymaž",catch, method: :delete,
+                  data: { confirm: "Si si istý?" } %>
     <% end %>
-    <%= link_to  "Show details", catch %>
+    <%= link_to  "Ukáž detaily", catch %>
   </span>
 </li>

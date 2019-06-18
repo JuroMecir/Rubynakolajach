@@ -1,29 +1,4 @@
 <html>
-<head>
-  <style>
-
-    table {
-      font-family: arial, sans-serif;
-      border-collapse: collapse;
-      width: 100%;
-    }
-
-    th {
-      background-color: #337ab7 ;
-      color: white
-    }
-
-    td, th {
-      border: 1px solid #dddddd;
-      text-align: left;
-      padding: 8px;
-    }
-
-    tr:nth-child(even) {
-      background-color: Aliceblue;
-    }
-  </style>
-</head>
 
 
 
@@ -44,39 +19,67 @@
 
   </div>
 <% else %>
-<div class="center jumbotron">
-  <h1>Welcome to the Fisherman's friend</h1>
-
-  <h2>
-    We have  <%= @countu[0]['count'] %> users and  <%= @countc[0]['count'] %> catches.
-  </h2>
-
-  <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
 
 
-</div>
+  <div class='container'>
+    <div class='row'>
+      <div class='col-xs-6' align="center">
+        <h2>Pozri si informácie o druhu ryby</h2>
+      </div>
+      <div class='col-xs-6' align="center">
+        <h2>Hľadaj revír podľa kraja, organizácie alebo mena</h2>
+      </div>
+    </div>
+    <div class='row'>
+      <div class='col-xs-6' align="center" >
+        <%= link_to 'Pokračuj tu', fishes_path, class: "btn btn-primary"%>
+      </div>
+      <div class='col-xs-6' align="center">
+        <%= link_to 'Pokračuj tu', areas_path, class: "btn btn-primary"%>
+      </div>
+      <hr/>
+    </div>
+    </div>
 
-  Places with best fish population:
 
-  <body>
-  <table style="width:50%">
-    <tr>
-      <th>Area name</th>
-      <th>Catches on 100 acres</th>
+  <div class='container'>
+    <h3>
+      Táto webová aplikácia bola vytvorená, aby pomohla rybárom vybrať si správny revír, návnadu alebo spôsob lovu na ulovenie daného druhu ryby.  Na to, aby sme poskytovali relevantné informácie potrebujeme aj tvoju pomoc. Tak neváhaj a pridaj svoj úlovok!
+    </h3>
 
 
-      <% @population_on_acre.each do |place| %>
-      <tr>
-        <td> <%=place['name'] %> </td>
-        <td> <%=place['count'] %></td>
-      </tr>
-    <% end %>
-    </tr>
-  </table>
-  </body>
+  <center><%= link_to "Zaregistruj sa!", signup_path, class: "btn btn-lg btn-primary" %></center>
 
+  </div>
+
+
+  <div class='container'>
+    <center>
+      <b>Revíry s najväčším počtom evidovaných úlovkov:</b>
+      <body>
+        <table style="width:50%">
+          <tr>
+            <th>Meno revíru</th>
+            <th>Počet úlovkov</th>
+
+
+            <% @population_on_acre.each do |place| %>
+          <tr>
+            <td> <%=place['name'] %> </td>
+            <td> <%=place['count'] %></td>
+          </tr>
+        <% end %>
+       </tr>
+     </table>
+    </body>
+    </center>
+  </div>
 
 <%end %>
+
+
+
+
 
 
 
