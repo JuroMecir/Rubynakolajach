@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   get 'sessions/new'
   get '/home', to: 'fisherman_friend#home'
-  get '/help', to: 'fisherman_friend#help'
+  get '/urcatches', to: 'fisherman_friend#urcatches'
   get '/about', to: 'fisherman_friend#about'
   get '/contact', to: 'fisherman_friend#contact'
   get '/areas', to: 'areas#index'

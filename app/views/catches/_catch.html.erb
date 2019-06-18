@@ -1,11 +1,10 @@
 <li id="catch-<%= catch.id %>">
-  <span class="user"><%= link_to catch.user.name, catch.user %> caught fish.</span>
-  <span class="timestamp">
-    Date: <%=  (catch.created_at) %> .
+  <span class="user"><%= catch.fish.name%>, <%= catch.area.name %>, <%= catch.size%> cm.</span>
+  <div class="row" align="left" >
     <% if current_user?(catch.user) %>
-      <%= link_to "Vymaž",catch, method: :delete,
+      <%= link_to "Vymaž", catch, method: :delete,
                   data: { confirm: "Si si istý?" } %>
     <% end %>
-    <%= link_to  "Ukáž detaily", catch %>
-  </span>
+    <%= link_to  "Zobraz detaily", catch %>
+  </div>
 </li>

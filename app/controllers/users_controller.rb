@@ -24,10 +24,10 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       log_in @user
-      flash[:success] = "Welcome brother!"
+      flash[:success] = "Účet úspešne vytvorený"
       redirect_to @user
     else
-      render 'new'
+      render root_url
     end
   end
 
@@ -38,8 +38,8 @@ class UsersController < ApplicationController
   def update
     @user = User.find(params[:id])
     if @user.update_attributes(user_params)
-      flash[:success] = "Profile updated"
-      redirect_to @user
+      flash[:success] = "Profil upravený"
+      redirect_to home_url
     else
       render 'edit'
     end
@@ -63,7 +63,7 @@ class UsersController < ApplicationController
 
   def logged_in_user
     unless logged_in?
-      flash[:danger] = "Please log in."
+      flash[:danger] = "Prosím prihláste sa."
       redirect_to login_url
     end
   end

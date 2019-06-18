@@ -10,7 +10,7 @@
 </head>
 <body>
 <%= render 'layouts/header' %>
-<% if current_page?('http://localhost:3000/home') or current_page?('http://localhost:3000/') %>
+<% if current_page?(root_url) or current_page?(home_url) %>
   <%= render  "shared/carousel" %>
 <% end %>
 

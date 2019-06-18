@@ -7,9 +7,10 @@
   width: 30%;
 }
 
-
-
-
+[class*="footer1"] {
+  background: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+  height: 40px;
+}
 
 .boxed {
   border-style: outset ;
@@ -32,7 +33,7 @@
 .carousel{
   background: #337ab7;
   height: 150px;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
 }
 /* duhovy header*/
 /*shading a podobne srandy*/

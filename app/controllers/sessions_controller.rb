@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
       log_in user
       redirect_to home_url
     else
-      flash.now[:danger] = 'Invalid email/password combination'
+      flash.now[:danger] = 'Nesprácne prihlasovacie údaje'
       render 'new'
     end
   end

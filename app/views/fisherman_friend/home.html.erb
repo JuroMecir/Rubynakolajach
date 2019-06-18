@@ -1,54 +1,15 @@
 <html>
 
-
-
-<% if logged_in? %>
-  <div class="row">
-    <aside class="col-md-4">
-      <section class="user_info">
-        <%= render 'shared/user_info' %>
-      </section>
-      <section class="catch _form">
-        <%= render 'shared/catch_form' %>
-      </section>
-    </aside>
-    <div class="col-md-8">
-      <h3>Catches:</h3>
-      <%= render 'shared/feed' %>
-    </div>
-
-  </div>
-<% else %>
-
-
-  <div class='container'>
-    <div class='row'>
-      <div class='col-xs-6' align="center">
-        <h2>Pozri si informácie o druhu ryby.</h2>
-      </div>
-      <div class='col-xs-6' align="center">
-        <h2>Hľadaj revír podľa organizácie alebo názvu revíru.</h2>
-      </div>
-    </div>
-    <div class='row'>
-      <div class='col-xs-6' align="center" >
-        <%= link_to 'Pokračuj tu', fishes_path, class: "btn btn-primary"%>
-      </div>
-      <div class='col-xs-6' align="center">
-        <%= link_to 'Pokračuj tu', areas_path, class: "btn btn-primary"%>
-      </div>
-      <hr/>
-    </div>
-    </div>
-
-
   <div class='container'>
     <h3>
       Táto webová aplikácia bola vytvorená, aby pomohla rybárom vybrať si správny revír, návnadu alebo spôsob lovu na ulovenie daného druhu ryby.  Na to, aby sme poskytovali relevantné informácie potrebujeme aj tvoju pomoc. Tak neváhaj a pridaj svoj úlovok!
     </h3>
 
-
-  <center><%= link_to "Zaregistruj sa!", signup_path, class: "btn btn-lg btn-primary" %></center>
+    <% if !logged_in? %>
+      <center><%= link_to "Zaregistruj sa!", signup_path, class: "btn btn-lg btn-primary" %></center>
+    <% else %>
+      <center><%= link_to "Pridaj úlovok!", urcatches_path, class: "btn btn-lg btn-primary" %></center>
+    <% end %>
 
   </div>
 
@@ -56,6 +17,8 @@
   <div class='container'>
     <center>
       <b>Revíry s najväčším počtom evidovaných úlovkov:</b>
+
+
       <body>
         <table style="width:50%">
           <tr>
@@ -74,10 +37,6 @@
     </body>
     </center>
   </div>
-
-<%end %>
-
-
 
 
 

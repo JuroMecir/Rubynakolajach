@@ -7,7 +7,7 @@ class CatchesController < ApplicationController
    def create
     @catch = current_user.catches.build(catch_params)
     if @catch.save
-      flash[:success] = "Catch created!"
+      flash[:success] = "Úlovok pridaný!"
       redirect_to root_url
     else
       @feed_items = []
@@ -25,7 +25,7 @@ class CatchesController < ApplicationController
 
   def destroy
     @catch.destroy
-    flash[:success] = "Catch deleted"
+    flash[:success] = "Úlovok odstránený"
     redirect_to request.referrer || root_url
 
   end
@@ -38,4 +38,6 @@ class CatchesController < ApplicationController
     @catch = current_user.catches.find_by(id: params[:id])
     redirect_to root_url if @catch.nil?
   end
+
+
 end
