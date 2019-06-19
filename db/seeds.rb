@@ -36,8 +36,6 @@ end
 =end
 
 
-=begin
-
 Fish.create!(name: "Boleň dravý")
 Fish.create!(name: "Hlavátka podunajská")
 Fish.create!(name: "Jalec hlavatý")
@@ -221,7 +219,4 @@ search_r('trenciansky-kraj', 'Trenčiansky kraj')
 
 
 
-=end
-
-
-ActiveRecord::Base.connection.execute("insert into catches(user_id, area_id, fish_id, methodf_id, bait_id, size, weight, created_at, updated_at) select 3 + i%100,  Floor(random()*120) + 713, 1 +  Floor(random()*32),1 + Floor(random()*6),1 + Floor(random()*10),20 + Floor(random()*100),Floor(random()*20) +1 , now(), now() from generate_series(0,10000) s(i);")
+ActiveRecord::Base.connection.execute("insert into catches(user_id, area_id, fish_id, methodf_id, bait_id, size, weight, created_at, updated_at) select 1 + i%100,  Floor(random()*120) + 713, 1 +  Floor(random()*32),1 + Floor(random()*6),1 + Floor(random()*10),20 + Floor(random()*100),Floor(random()*20) +1 , now(), now() from generate_series(0,10000) s(i);")
