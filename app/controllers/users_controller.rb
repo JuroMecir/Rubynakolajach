@@ -5,7 +5,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @catches = @user.catches.all
+    @catches = @user.catches.all.paginate(page: params[:page]).order('created_at DESC')
   end
 
   def new
@@ -25,7 +25,7 @@ class UsersController < ApplicationController
     if @user.save
       log_in @user
       flash[:success] = "Účet úspešne vytvorený"
-      redirect_to root_url
+      redirect_to urcatches_url
     else
       render 'new'
     end

@@ -36,6 +36,8 @@ end
 =end
 
 
+=begin
+
 Fish.create!(name: "Boleň dravý")
 Fish.create!(name: "Hlavátka podunajská")
 Fish.create!(name: "Jalec hlavatý")
@@ -204,5 +206,22 @@ search_r('trenciansky-kraj', 'Trenčiansky kraj')
 
 
 
+100.times do |n|
+  name  = Faker::Name.first_name
+  surname = Faker::Name.last_name
+  age = Faker::Number.between(15, 80)
+  email = "generating-#{n+1}@jurovprojekt.org"
+  password = "heslo1"
+  User.create!(name:  name,
+               surname: surname,
+               age: age,
+               email: email,
+               password: password)
+  end
 
 
+
+=end
+
+
+ActiveRecord::Base.connection.execute("insert into catches(user_id, area_id, fish_id, methodf_id, bait_id, size, weight, created_at, updated_at) select 3 + i%100,  Floor(random()*120) + 713, 1 +  Floor(random()*32),1 + Floor(random()*6),1 + Floor(random()*10),20 + Floor(random()*100),Floor(random()*20) +1 , now(), now() from generate_series(0,10000) s(i);")
