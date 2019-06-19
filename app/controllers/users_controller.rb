@@ -25,9 +25,9 @@ class UsersController < ApplicationController
     if @user.save
       log_in @user
       flash[:success] = "Účet úspešne vytvorený"
-      redirect_to @user
+      redirect_to root_url
     else
-      render root_url
+      render 'new'
     end
   end
 

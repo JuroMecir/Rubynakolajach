@@ -1,5 +1,7 @@
 class GeneratingTablesForProduction < ActiveRecord::Migration[5.2]
   def change
+    enable_extension 'unaccent'
+
     create_table :fish do |t|
       t.string :name
 

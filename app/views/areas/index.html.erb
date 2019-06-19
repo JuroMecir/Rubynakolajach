@@ -15,7 +15,7 @@
 
 
 
-<div class="modal fade" id="approvalModal" tabindex="-1" role="dialog" aria-labelledby="approvalModalLabel" aria-hidden="true">
+<div class="modal fade in" id="approvalModal" tabindex="-1" role="dialog" aria-labelledby="approvalModalLabel" aria-hidden="true" >
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -26,9 +26,10 @@
         <%= form_tag areas_path, :method => 'get', :class => "form-horizontal" do %>
           Zadaj hľadaný výraz a stlač tlačidlo Vyhľadaj.
           <%= text_field_tag :search, params[:search], :class => "form-control" %>
+          <%= submit_tag "Vyhľadaj", name: 'submit', class: "btn btn-primary" %>
           </div>
           <div class="modal-footer">
-            <%= submit_tag "Vyhľadaj", name: nil, class: "btn btn-primary" %>
+
         <% end %>
         </div>
         </div><!-- /.modal-content -->

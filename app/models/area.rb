@@ -8,4 +8,6 @@ class Area < ApplicationRecord
       all
     end
   end
+
+  scope :ordered_by_name, -> { order("areas.name ASC") }
 end

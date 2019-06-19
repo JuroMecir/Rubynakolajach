@@ -13,7 +13,7 @@
     <%= f.number_field :weight, class: 'form-control' %>
 
     <%= f.label 'Revír'%>
-    <%= f.collection_select :area_id, Area.all, :id, :name, :include_blank => true %>
+    <%= f.collection_select :area_id, Area.ordered_by_name , :id, :name, :include_blank => true %>
 
     <%= f.label 'Návnada' %>
     <%= f.collection_select :bait_id, Bait.all, :id, :name, :include_blank => true %>

@@ -1,4 +1,4 @@
-class CatchesController < ApplicationController
+class  CatchesController < ApplicationController
 
   before_action :logged_in_user, only: [:create, :destroy]
   before_action :correct_user,   only: :destroy
@@ -8,10 +8,10 @@ class CatchesController < ApplicationController
     @catch = current_user.catches.build(catch_params)
     if @catch.save
       flash[:success] = "Úlovok pridaný!"
-      redirect_to root_url
+      redirect_to urcatches_url
     else
       @feed_items = []
-      render 'fisherman_friend/home'
+      render 'fisherman_friend/urcatches'
     end
   end
 

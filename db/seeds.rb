@@ -35,6 +35,7 @@ end
 
 =end
 
+
 Fish.create!(name: "Boleň dravý")
 Fish.create!(name: "Hlavátka podunajská")
 Fish.create!(name: "Jalec hlavatý")
@@ -183,6 +184,9 @@ def process_r(link,label)
     end
     if revir == nil
       revir = '0'
+    end
+    if vlastnik == 'Účel:'
+      vlastnik = 'nezadané'
     end
     puts(' nazov reviru:' + revir + '   cislo reviru:' + cislor + '   rozloha reviru:' + rozloha + '  vlastnik: ' + vlastnik )
     Area.create!(name: revir, number: cislor, acreage: rozloha, owner: vlastnik, region: label )

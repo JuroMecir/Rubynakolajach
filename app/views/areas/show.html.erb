@@ -13,25 +13,49 @@
 
 
   <% if @fish_population.any? %>
-  <div class="container" align="center">
-    <b> Počet rýb ulovených v revíre:</b>
-    <body>
-     <table style="width:50%">
-        <tr>
-          <th>Druh ryby</th>
-          <th>Počet úlovkov</th>
-            <% @fish_population.each do |record| %>
-              <tr>
-                <td> <%=record['name'] %> </td>
-                <td> <%=record['count'] %></td>
-              </tr>
-            <% end %>
-        </tr>
-      </table>
-    </body>
+      <div class="container" align="center" >
+        <b>Najväčší úlovok:</b>
+        <% @largest.each do |record| %>
+          <%=record['max'] %> cm
+        <% end %><br>
+
+        <b>Najťažší úlovok:</b>
+        <% @heaviest.each do |record| %>
+          <%=record['max'] %> kg
+        <% end %><br>
+
+
+        <b>Priemerná dĺžka:</b>
+        <% @avgsize.each do |record| %>
+          <%=record['round'] %> cm
+        <% end %><br>
+
+
+        <b>Priemerná váha:</b>
+        <% @avgweight.each do |record| %>
+          <%=record['round'] %> kg
+        <% end %>
       </div>
-    <% else %>
-      <h3>O tomto revíre žiaľ nemáme žiadne záznamy. </h3>
-    <% end %>
-  </div>
+
+      <div class="container" align="center">
+        <b> Počet rýb ulovených v revíre:</b>
+        <body>
+         <table style="width:50%">
+            <tr>
+              <th>Druh ryby</th>
+              <th>Počet úlovkov</th>
+                <% @fish_population.each do |record| %>
+                  <tr>
+                    <td> <%=record['name'] %> </td>
+                    <td> <%=record['count'] %></td>
+                  </tr>
+                <% end %>
+            </tr>
+          </table>
+        </body>
+          </div>
+        <% else %>
+          <h3>O tomto revíre žiaľ nemáme žiadne záznamy. </h3>
+        <% end %>
+      </div>
 
