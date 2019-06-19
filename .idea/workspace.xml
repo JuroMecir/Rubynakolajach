@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0f5d6f1b-50e6-4a88-ae6f-ede6b7cd8940" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/controllers/users_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/users_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/fisherman_friend/home.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/fisherman_friend/home.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/fisherman_friend/urcatches.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/fisherman_friend/urcatches.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/users/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/users/edit.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/users/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/users/show.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/seeds.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/seeds.rb" afterDir="false" />
-    </list>
+    <list default="true" id="0f5d6f1b-50e6-4a88-ae6f-ede6b7cd8940" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,7 +9,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/VOS@Development__VOS.rcov" NAME="Development: VOS Coverage Results" MODIFIED="1560950346104" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="VOS" />
+    <SUITE FILE_PATH="coverage/VOS@Development__VOS.rcov" NAME="Development: VOS Coverage Results" MODIFIED="1560954929817" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="VOS" />
     <SUITE FILE_PATH="coverage/VOS@csfd__1_.rcov" NAME="csfd (1) Coverage Results" MODIFIED="1560891679824" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Downloads" MODULE_NAME="VOS" />
     <SUITE FILE_PATH="coverage/VOS@db_migrate.rcov" NAME="db:migrate Coverage Results" MODIFIED="1560759275700" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="VOS" />
     <SUITE FILE_PATH="coverage/VOS@db_migrate__1_.rcov" NAME="db:migrate (1) Coverage Results" MODIFIED="1560762255868" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="VOS" />
@@ -42,7 +35,7 @@
         <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-694">
-              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+              <caret line="13" selection-start-line="13" selection-end-line="13" />
             </state>
           </provider>
         </entry>
@@ -50,8 +43,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/db/seeds.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="226" column="153" selection-start-line="226" selection-start-column="153" selection-end-line="226" selection-end-column="153" />
+            <state relative-caret-position="187">
+              <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
             </state>
           </provider>
         </entry>
@@ -102,7 +95,7 @@
         <entry file="file://$PROJECT_DIR$/app/views/users/show.html.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
-              <caret line="15" column="30" lean-forward="true" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
+              <caret line="15" column="30" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -233,126 +226,6 @@
               <item name="VOS" type="b2602c69:ProjectViewProjectNode" />
               <item name="VOS" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="VOS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="VOS" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="VOS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="VOS" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="javascripts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="VOS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="VOS" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="stylesheets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="VOS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="VOS" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="channels" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="VOS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="VOS" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="channels" type="462c0819:PsiDirectoryNode" />
-              <item name="application_cable" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="VOS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="VOS" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="VOS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="VOS" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-              <item name="concerns" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="VOS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="VOS" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="helpers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="VOS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="VOS" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="VOS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="VOS" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="VOS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="VOS" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="areas" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="VOS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="VOS" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="catches" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="VOS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="VOS" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="fisherman_friend" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="VOS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="VOS" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="fishes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="VOS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="VOS" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="layouts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="VOS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="VOS" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="sessions" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="VOS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="VOS" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="shared" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="VOS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="VOS" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="users" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="VOS" type="b2602c69:ProjectViewProjectNode" />
@@ -619,12 +492,12 @@
       <workItem from="1560755603065" duration="22766000" />
       <workItem from="1560839061851" duration="20531000" />
       <workItem from="1560878189852" duration="18953000" />
-      <workItem from="1560929636699" duration="14579000" />
+      <workItem from="1560929636699" duration="15300000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="300906000" />
+    <option name="totallyTimeSpent" value="301627000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -636,15 +509,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49898168" visible="true" weight="0.17315437" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49898168" visible="true" weight="0.17315437" />
       <window_info id="Structure" order="1" sideWeight="0.50101835" side_tool="true" weight="0.27114093" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49328858" weight="0.33144477" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.7261745" visible="true" weight="0.4546742" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.7261745" visible="true" weight="0.4546742" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49925372" weight="0.39943343" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -955,21 +828,21 @@
     <entry file="file://$PROJECT_DIR$/app/views/users/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
-          <caret line="15" column="30" lean-forward="true" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
+          <caret line="15" column="30" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-694">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/db/seeds.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="226" column="153" selection-start-line="226" selection-start-column="153" selection-end-line="226" selection-end-column="153" />
+        <state relative-caret-position="187">
+          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
         </state>
       </provider>
     </entry>
