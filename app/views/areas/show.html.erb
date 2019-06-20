@@ -10,6 +10,7 @@
     <b>Číslo revíru:</b> <%= @area.number %><br>
     <b>Organizácia:</b> <%= @area.owner %><br>
     <b>Región:</b> <%= @area.region %> <br>
+    Pozn.:Rozloha revíru 0 značí že daný revír je rieka alebo že rozloha nie je známa.
 
 
   <% if @fish_population.any? %>
@@ -25,13 +26,13 @@
         <% end %><br>
 
 
-        <b>Priemerná dĺžka:</b>
+        <b>Priemerná dĺžka úlovkov:</b>
         <% @avgsize.each do |record| %>
           <%=record['round'] %> cm
         <% end %><br>
 
 
-        <b>Priemerná váha:</b>
+        <b>Priemerná váha úlovkov:</b>
         <% @avgweight.each do |record| %>
           <%=record['round'] %> kg
         <% end %>
@@ -57,5 +58,6 @@
         <% else %>
           <h3>O tomto revíre žiaľ nemáme žiadne záznamy. </h3>
         <% end %>
+
       </div>
 
